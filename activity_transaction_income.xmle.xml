@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionIncomeActivity">
+    <LinearLayout
+        android:id="@+id/titleAndBack"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/home_title_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_margin="20dp"
+            android:weightSum="1">
+            <ImageButton
+                android:layout_weight="0.01"
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_btn_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_back"/>
+
+            <TextView
+                android:layout_weight="0.98"
+                android:id="@+id/topTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:text="Danh sách thu nhập"
+                android:textStyle="bold"
+                android:textSize="22sp" />
+
+
+
+            <ImageButton
+                android:layout_weight="0.01"
+                android:id="@+id/addTransactionIncome"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/back_btn_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/add"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_margin="10dp"
+        android:id="@+id/searchViewTranIncome"
+        android:layout_below="@+id/titleAndBack"
+        app:queryBackground="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_input"
+        app:queryHint="Search here..."
+        app:iconifiedByDefault="false"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchViewTranIncome"
+        android:layout_alignBottom="@+id/titleAndBack"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
+        android:text="Chọn để xem chi tiết hoặc chỉnh sửa"
+        android:textSize="15sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tranIncomeRecycleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-12dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="-28dp"
+        tools:listitem="@layout/item_transaction" />
+
+</RelativeLayout>
