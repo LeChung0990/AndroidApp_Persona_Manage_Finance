@@ -27,6 +27,7 @@
             android:textSize="25dp"
             android:textStyle="bold"
             android:textColor="#FFFFFF" />
+
         <TextView
             android:id="@+id/profileName"
             android:layout_width="wrap_content"
@@ -48,46 +49,34 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Thêm chi tiêu"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="Thêm C.Tiêu"
         android:id="@+id/btnChiTieu"
-        android:layout_alignTop="@+id/btnThuNhap"
-        android:layout_toStartOf="@+id/btnThongKe" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/hienthi"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:hint="Chi tiêu gần đây"
-        android:layout_below="@+id/btnChiTieu"
-        android:layout_alignParentStart="true" />
+        android:layout_alignTop="@+id/btnThongKe"
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Thêm Thu Nhập"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="Thêm T.Nhập"
         android:id="@+id/btnThuNhap"
-        android:layout_below="@+id/btnLogOut"
+        android:layout_alignTop="@+id/btnChiTieu"
         android:layout_alignParentStart="true" />
 
     <Button
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
         android:text="Thống kê"
         android:id="@+id/btnThongKe"
-        android:layout_above="@+id/hienthi"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/btnLogOut" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_alignTop="@+id/hienthi"
-        android:layout_toStartOf="@+id/btnThongKe"
-        android:layout_marginTop="146dp" />
+        android:id="@+id/lvhienthi"
+        android:layout_below="@+id/btnChiTieu"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

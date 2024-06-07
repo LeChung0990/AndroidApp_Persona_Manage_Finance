@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:id="@+id/edtThoigian"
+        android:id="@+id/edtDate2"
         android:hint="Thời gian (dd/mm/yy)"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -35,18 +35,18 @@
         android:text="Danh Mục"
         android:textAlignment="center"
         android:id="@+id/textView2"
-        android:layout_below="@+id/edtThoigian"
-        android:layout_alignEnd="@+id/edtThoigian"
+        android:layout_below="@+id/edtDate2"
+        android:layout_alignEnd="@+id/edtDate2"
         android:layout_toEndOf="@+id/imageView2" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tiết kiệm"
-        android:id="@+id/chkTietkiem"
+        android:text="Lương"
+        android:id="@+id/chkLuong"
         android:checked="false"
         android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/btnAdd" />
+        android:layout_centerHorizontal="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -60,37 +60,37 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lương"
-        android:id="@+id/chkLuong"
+        android:text="Tiết kiệm"
+        android:id="@+id/chkTietkiem"
         android:checked="false"
-        android:layout_below="@+id/chkTietkiem"
-        android:layout_toStartOf="@+id/textView2" />
+        android:layout_below="@+id/chkLuong"
+        android:layout_alignParentStart="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Khác 1"
-        android:id="@+id/chkKhac1"
+        android:id="@+id/chk1Khac"
         android:checked="false"
-        android:layout_below="@+id/chkTietkiem"
-        android:layout_alignStart="@+id/chkTietkiem" />
+        android:layout_below="@+id/chkLuong"
+        android:layout_alignStart="@+id/chkLuong" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Khác 2"
-        android:id="@+id/chkKhac2"
-        android:layout_alignTop="@+id/chkKhac1"
+        android:id="@+id/chk2Khac"
+        android:layout_alignTop="@+id/chk1Khac"
         android:layout_alignStart="@+id/chkTienthuong"
         android:checked="false" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/edtChitiet"
+        android:id="@+id/edtChitiet2"
         android:hint="Chi tiết"
-        android:layout_below="@+id/chkLuong"
-        android:layout_alignStart="@+id/chkLuong"
+        android:layout_below="@+id/chkTietkiem"
+        android:layout_alignStart="@+id/chkTietkiem"
         android:layout_alignParentEnd="true" />
 
     <EditText
@@ -98,17 +98,10 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/edtTien"
+        android:id="@+id/edtTien2"
         android:hint="Số tiền (VND)"
-        android:layout_below="@+id/edtChitiet"
+        android:layout_below="@+id/edtChitiet2"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nhập dữ liệu"
-        android:id="@+id/btnAdd"
-        android:layout_below="@+id/edtTien"
-        android:layout_centerHorizontal="true" />
 </RelativeLayout>

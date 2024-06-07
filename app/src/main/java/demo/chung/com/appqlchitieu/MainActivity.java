@@ -37,13 +37,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.loginButton:
                 if (user.getText().toString().trim().length() <=0 || password.getText().toString().trim().length() <= 0){
                     Toast.makeText(MainActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
-                } else {
+                } else if(user.getText().toString().equals("chung") &&  password.getText().toString().equals("123")) {
                     //chua the dung tinh nang dung user va password
                     String ten = user.getText().toString().trim();
                     String mk =  password.getText().toString().trim();
-                    Toast.makeText(MainActivity.this, "Tên:"+ ten + "\nMật khẩu:" + mk, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Tên:" + ten + "\nMật khẩu:" + mk + "\nĐăng nhập thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, MainHomeActivity.class);
                     startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, "Sai mật khẩu hoặc tên đăng nhập", Toast.LENGTH_SHORT).show();
                 }
                 break;
         }
