@@ -14,10 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainHomeActivity extends AppCompatActivity implements View.OnClickListener{
-    Button simple, layout, LogOut;
+    Button Tchitieu, Tthunhap, LogOut, Thongke;
     TextView hthi;
     //tao bien cong khai
     View custom_view;
+
 
 
     @Override
@@ -28,14 +29,18 @@ public class MainHomeActivity extends AppCompatActivity implements View.OnClickL
     }
 
     public void init(){
-//        simple = (Button)findViewById(R.id.btnSimple);
-        layout = (Button)findViewById(R.id.btnLayout);
+        Tthunhap = (Button)findViewById(R.id.btnThuNhap);
+        Tchitieu = (Button)findViewById(R.id.btnChiTieu);
+        Thongke = (Button)findViewById(R.id.btnThongKe);
         LogOut = (Button)findViewById(R.id.btnLogOut);
         hthi = (TextView)findViewById(R.id.hienthi);
 
-//        simple.setOnClickListener(this);
-        layout.setOnClickListener(this);
+        Tthunhap.setOnClickListener(this);
+        Tchitieu.setOnClickListener(this);
+        Thongke.setOnClickListener(this);
         LogOut.setOnClickListener(this);
+
+
 
 //        Bundle bundle = getIntent().getExtras();
 //        if(bundle != null){
@@ -49,11 +54,11 @@ public class MainHomeActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-//            case R.id.btnSimple:
-//                dialogSimple();
-//                break;
-            case R.id.btnLayout:
-                dialogLayout();
+            case R.id.btnThuNhap:
+                ThuNhapLayout();
+                break;
+            case R.id.btnChiTieu:
+                ChiTieuLayout();
                 break;
             case R.id.btnLogOut:
                 Intent intent = new Intent(MainHomeActivity.this, MainActivity.class);
@@ -63,9 +68,36 @@ public class MainHomeActivity extends AppCompatActivity implements View.OnClickL
     }
 
 
+    public void ThuNhapLayout(){
 
+
+        LayoutInflater inflater = MainHomeActivity.this.getLayoutInflater();
+        //Buoc2 lay duong dan Layout
+        custom_view = inflater.inflate(R.layout.activity_activity_custom_layout2, null);
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainHomeActivity.this)
+                .setTitle("Thêm Thu Nhập")
+                .setView(custom_view)
+                .setPositiveButton("Xong", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+//                        if (muc1.getText().toString().trim().length() <= 0 || muc2.getText().toString().trim().length() <= 0) {
+//                            Toast.makeText(MainHomeActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+//                        } else {
+//                            Toast.makeText(MainHomeActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
+//                            String firts = muc1.getText().toString().trim();
+//                            String second = muc2.getText().toString().trim();
+//                            hthi.setText("Muc1: " + firts + "\nMuc2: " + second);
 //
-//    public void dialogSimple(){
+//                        }
+                    }
+                })
+                        //Dong nay co tac dung gi
+                .setCancelable(false);
+        builder.create().show();
+
+
 //        AlertDialog.Builder builder = new AlertDialog.Builder(MainHomeActivity.this)
 //                .setTitle("Thông Báo")
 //                .setMessage("Xoá Dữ Liệu Thành Công")
@@ -82,9 +114,9 @@ public class MainHomeActivity extends AppCompatActivity implements View.OnClickL
 //                    }
 //                });
 //        builder.create().show();
-//    }
+    }
 
-    public void dialogLayout(){
+    public void ChiTieuLayout(){
         //Buoc 1 taoj layout
         //Buoc2 lay duong dan Layout
         //Buoc3 Gan vao Dialog
@@ -100,17 +132,36 @@ public class MainHomeActivity extends AppCompatActivity implements View.OnClickL
                 .setPositiveButton("Xong", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-//                        EditText muc1 = (EditText) custom_view.findViewById(R.id.edt1);
-//                        EditText muc2 = (EditText) custom_view.findViewById(R.id.edt2);
-//                        if (muc1.getText().toString().trim().length() <= 0 || muc2.getText().toString().trim().length() <= 0) {
-//                            Toast.makeText(MainHomeActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
-//                        } else {
-//                            Toast.makeText(MainHomeActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
-//                            String firts = muc1.getText().toString().trim();
-//                            String second = muc2.getText().toString().trim();
-//                            hthi.setText("Muc1: " + firts + "\nMuc2: " + second);
-//
-//                        }
+
+
+                        EditText muc1 = (EditText) custom_view.findViewById(R.id.edtDate);
+                        EditText muc2 = (EditText) custom_view.findViewById(R.id.edtTien);
+                        EditText muc3 = (EditText) custom_view.findViewById(R.id.edtChiTiet);
+
+                        String Ngay = muc1.getText().toString();
+                        String SoTien = muc2.getText().toString();
+                        String ChiTiet = muc3.getText().toString();
+
+//                        // Lưu dữ liệu vào SharedPreferences
+//                        SharedPreferences.Editor editor = sharedPreferences.edit();
+//                        editor.putString("Ngay", Ngay);
+//                        editor.putString("SoTien", SoTien);
+//                        editor.putString("ChiTiet", ChiTiet);
+//                        editor.apply();
+
+//                        Toast.makeText(MainHomeActivity.this, "Dữ liệu đã được lưu", Toast.LENGTH_SHORT).show();
+
+
+
+                        if (muc1.getText().toString().trim().length() <= 0 || muc2.getText().toString().trim().length() <= 0) {
+                            Toast.makeText(MainHomeActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(MainHomeActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show();
+                            String firts = muc1.getText().toString().trim();
+                            String second = muc2.getText().toString().trim();
+                            hthi.setText("Muc1: " + firts + "\nMuc2: " + second);
+
+                        }
                     }
                 })
                         //Dong nay co tac dung gi

@@ -36,8 +36,8 @@
         android:id="@+id/edtTien"
         android:hint="Số tiền (VND)"
         android:layout_below="@+id/edtChiTiet"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -45,6 +45,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Danh Mục"
         android:id="@+id/textView"
+        android:textAlignment="center"
         android:layout_below="@+id/edtDate"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/imageView" />
@@ -54,9 +55,9 @@
         android:layout_height="wrap_content"
         android:text="Đi lại"
         android:id="@+id/chkDilai"
+        android:checked="false"
         android:layout_below="@+id/textView"
-        android:layout_toEndOf="@+id/imageView"
-        android:checked="false" />
+        android:layout_alignStart="@+id/btnAdd" />
 
     <CheckBox
         android:layout_width="wrap_content"
@@ -91,27 +92,27 @@
         android:layout_height="wrap_content"
         android:text="Cá nhân"
         android:id="@+id/chkCanhan"
-        android:layout_below="@+id/chkYte"
-        android:layout_alignStart="@+id/chkYte"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_alignTop="@+id/chkYte"
+        android:layout_alignParentStart="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Giải trí"
         android:id="@+id/chkGiaitri"
-        android:layout_below="@+id/chkNhao"
-        android:layout_alignStart="@+id/chkNhao"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_below="@+id/chkYte"
+        android:layout_alignStart="@+id/chkYte" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtChiTiet"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/textView"
         android:hint="Chi tiết"
-        android:layout_below="@+id/chkCanhan" />
+        android:layout_below="@+id/chkGiaitri"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -120,5 +121,23 @@
         android:id="@+id/btnAdd"
         android:layout_below="@+id/edtTien"
         android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khác 1"
+        android:id="@+id/chkKhac1"
+        android:layout_below="@+id/chkCanhan"
+        android:layout_alignStart="@+id/chkCanhan"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Khác 2"
+        android:id="@+id/chkKhac2"
+        android:checked="false"
+        android:layout_below="@+id/chkNhao"
+        android:layout_alignStart="@+id/chkNhao" />
 
 </RelativeLayout>

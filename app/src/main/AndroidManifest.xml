@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CustomLayoutActivity" />
-        <activity android:name=".MainHomeActivity"></activity>
+        <activity android:name=".MainHomeActivity" />
+        <activity android:name=".activity_custom_layout2"></activity>
     </application>
 
 </manifest>

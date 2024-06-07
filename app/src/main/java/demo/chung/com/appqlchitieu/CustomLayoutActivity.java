@@ -22,7 +22,10 @@ public class CustomLayoutActivity extends AppCompatActivity {
 //    Spinner DanhMuc;
 
 //    Button nhaptt;
-    SharedPreferences sp;
+//    SharedPreferences sp;
+//    SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+//    String savedData = sharedPreferences.getString("key", "");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,8 @@ public class CustomLayoutActivity extends AppCompatActivity {
         canhan = (CheckBox)findViewById(R.id.chkCanhan);
         giaitri = (CheckBox)findViewById(R.id.chkGiaitri);
         NhapData = (Button)findViewById(R.id.btnAdd);
+
+//        sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
 
 
 //        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, arrayDanhMuc);
