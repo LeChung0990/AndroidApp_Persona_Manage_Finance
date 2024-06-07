@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="demo.chung.com.appqlchitieu.CustomLayoutActivity">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/budget" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/edtDate"
+        android:hint="Thời gian (dd/mm/yy)"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtTien"
+        android:hint="Số tiền (VND)"
+        android:layout_below="@+id/edtChiTiet"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Danh Mục"
+        android:id="@+id/textView"
+        android:layout_below="@+id/edtDate"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đi lại"
+        android:id="@+id/chkDilai"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/imageView"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ăn uống"
+        android:id="@+id/chkAnuong"
+        android:checked="false"
+        android:layout_marginEnd="33dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y tế"
+        android:id="@+id/chkYte"
+        android:checked="false"
+        android:layout_below="@+id/chkDilai"
+        android:layout_alignStart="@+id/chkDilai" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhà ở"
+        android:id="@+id/chkNhao"
+        android:checked="false"
+        android:layout_below="@+id/chkAnuong"
+        android:layout_alignStart="@+id/chkAnuong" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cá nhân"
+        android:id="@+id/chkCanhan"
+        android:layout_below="@+id/chkYte"
+        android:layout_alignStart="@+id/chkYte"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giải trí"
+        android:id="@+id/chkGiaitri"
+        android:layout_below="@+id/chkNhao"
+        android:layout_alignStart="@+id/chkNhao"
+        android:checked="false" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtChiTiet"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView"
+        android:hint="Chi tiết"
+        android:layout_below="@+id/chkCanhan" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập dữ liệu"
+        android:id="@+id/btnAdd"
+        android:layout_below="@+id/edtTien"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
