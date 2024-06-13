@@ -20,6 +20,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
+
+//                Intent intent1 = new Intent(MainActivity.this, MainHomeActivity.class);
+//                startActivity(intent1);
                 init();
         }
 
@@ -28,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         user = (EditText)findViewById(R.id.EdtUser);
         password = (EditText)findViewById(R.id.EdtPass);
         login.setOnClickListener(this);
-
     }
 
     @Override
@@ -38,10 +40,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (user.getText().toString().trim().length() <=0 || password.getText().toString().trim().length() <= 0){
                     Toast.makeText(MainActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 } else if(user.getText().toString().equals("chung") &&  password.getText().toString().equals("123")) {
-                    //chua the dung tinh nang dung user va password
-                    String ten = user.getText().toString().trim();
-                    String mk =  password.getText().toString().trim();
-                    Toast.makeText(MainActivity.this, "Tên:" + ten + "\nMật khẩu:" + mk + "\nĐăng nhập thành công", Toast.LENGTH_SHORT).show();
+
+//                    String ten = user.getText().toString().trim();
+//                    String mk =  password.getText().toString().trim();
+
+
+                    Toast.makeText(MainActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                    user.setText("");
+                    password.setText("");
+                    //Toast.makeText(MainActivity.this, "Tên:" + ten + "\nMật khẩu:" + mk + "\nĐăng nhập thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(MainActivity.this, MainHomeActivity.class);
                     startActivity(intent);
                 } else {

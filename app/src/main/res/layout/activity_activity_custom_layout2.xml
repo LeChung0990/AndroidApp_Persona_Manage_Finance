@@ -17,17 +17,6 @@
         android:layout_alignParentStart="true"
         android:src="@drawable/thunhap" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/edtDate2"
-        android:hint="Thời gian (dd/mm/yy)"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_toEndOf="@+id/imageView2" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,7 +24,7 @@
         android:text="Danh Mục"
         android:textAlignment="center"
         android:id="@+id/textView2"
-        android:layout_below="@+id/edtDate2"
+        android:layout_marginTop="35dp"
         android:layout_alignEnd="@+id/edtDate2"
         android:layout_toEndOf="@+id/imageView2" />
 
@@ -88,7 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtChitiet2"
-        android:hint="Chi tiết"
+        android:hint="Nhập chi tiết khoản chi tiêu"
         android:layout_below="@+id/chkTietkiem"
         android:layout_alignStart="@+id/chkTietkiem"
         android:layout_alignParentEnd="true" />
@@ -99,9 +88,67 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/edtTien2"
-        android:hint="Số tiền (VND)"
+        android:hint="Vui lòng nhập số tiền (VND)"
         android:layout_below="@+id/edtChitiet2"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignEnd="@+id/chkLuong" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/edtDate2"
+        android:layout_alignParentTop="true"
+        android:hint="Thời gian (dd-mm-yy)"
+        android:layout_alignEnd="@+id/chkTienthuong"
+        android:layout_toEndOf="@+id/imageView2" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvhthi2"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnHthi2"
+        android:background="#5cffb8" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Danh sách"
+        android:id="@+id/btnHthi2"
+        android:layout_below="@+id/edtTien2"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgThem2"
+        android:src="@drawable/add"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/edtTien2"
+        android:layout_alignEnd="@+id/chkTietkiem" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgXoa2"
+        android:src="@drawable/delete"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/btnHthi2"
+        android:layout_alignEnd="@+id/chk2Khac" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtID_Inc"
+        android:layout_above="@+id/imgXoa2"
+        android:layout_toEndOf="@+id/chk1Khac"
+        android:hint="ID muốn xoá" />
 
 </RelativeLayout>

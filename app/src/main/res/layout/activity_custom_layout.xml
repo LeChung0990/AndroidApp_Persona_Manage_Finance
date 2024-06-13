@@ -34,10 +34,10 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/edtTien"
-        android:hint="Số tiền (VND)"
+        android:hint="Vui lòng nhập số tiền (VND)"
         android:layout_below="@+id/edtChiTiet"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignEnd="@+id/chkDilai" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/edtChiTiet"
-        android:hint="Chi tiết"
+        android:hint="Nhập chi tiết khoản chi tiêu"
         android:layout_below="@+id/chkGiaitri"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
@@ -132,5 +132,56 @@
         android:checked="false"
         android:layout_below="@+id/chkNhao"
         android:layout_alignStart="@+id/chkNhao" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvhienthi"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btnHthi"
+        android:background="#fefb63" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Danh sách"
+        android:id="@+id/btnHthi"
+        android:layout_below="@+id/edtTien"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgXoa"
+        android:src="@drawable/delete"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/edtTien"
+        android:layout_alignEnd="@+id/chkNhao" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgThem"
+        android:src="@drawable/add"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_below="@+id/edtTien"
+        android:layout_toStartOf="@+id/chkDilai" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/edtID_Exp"
+
+
+        android:layout_below="@+id/edtChiTiet"
+        android:layout_alignEnd="@+id/edtChiTiet"
+        android:layout_toEndOf="@+id/chkGiaitri"
+        android:hint="ID muốn xoá" />
 
 </RelativeLayout>

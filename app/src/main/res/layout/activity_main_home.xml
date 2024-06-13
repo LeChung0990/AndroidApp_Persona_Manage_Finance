@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#e9dede"
+    android:background="#ffffff"
     tools:context="demo.chung.com.appqlchitieu.MainHomeActivity">
 
     <LinearLayout
@@ -16,67 +16,103 @@
         android:orientation="vertical"
         android:layout_weight="1"
         android:id="@+id/linearLayout"
+        android:background="#21d78e"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
         <TextView
+            android:id="@+id/profileName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:textSize="22dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
             android:text="Chào mừng trở lại"
             android:textAlignment="center"
             android:textSize="25dp"
             android:textStyle="bold"
             android:textColor="#FFFFFF" />
 
-        <TextView
-            android:id="@+id/profileName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="22dp"
-            android:textColor="#1606FB" />
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log Out"
-        android:textStyle="bold"
-        android:textColor="#c92424"
-        android:id="@+id/btnLogOut"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentEnd="true" />
-
-    <Button
+    <ImageButton
         android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:text="Thêm C.Tiêu"
-        android:id="@+id/btnChiTieu"
-        android:layout_alignTop="@+id/btnThongKe"
+        android:layout_height="100dp"
+        android:id="@+id/imgBtnTnhap"
+        android:layout_marginTop="150dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/thunhap"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"/>
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgBtnCtieu"
+        android:src="@drawable/budget"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/imgBtnTnhap"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:text="Thêm T.Nhập"
-        android:id="@+id/btnThuNhap"
-        android:layout_alignTop="@+id/btnChiTieu"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:text="Thống kê"
-        android:id="@+id/btnThongKe"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/btnLogOut" />
-
-    <ListView
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/lvhienthi"
-        android:layout_below="@+id/btnChiTieu"
-        android:layout_alignParentStart="true" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Thu nhập"
+        android:id="@+id/textView4"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/imgBtnTnhap"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/imgBtnTnhap" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Chi tiêu"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/imgBtnCtieu"
+        android:layout_alignStart="@+id/imgBtnCtieu"
+        android:layout_alignEnd="@+id/imgBtnCtieu" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgBtnTke"
+        android:src="@drawable/analytics"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@+id/imgBtnCtieu"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Thống kê"
+        android:id="@+id/textView5"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/imgBtnTke"
+        android:layout_alignStart="@+id/imgBtnTke"
+        android:layout_alignEnd="@+id/imgBtnTke" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgBtnLogOut"
+        android:src="@drawable/logout"
+        android:scaleType="fitXY"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignEnd="@+id/linearLayout" />
 
 </RelativeLayout>
